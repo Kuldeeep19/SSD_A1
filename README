@@ -1,0 +1,25 @@
+//for question 1
+define path to file
+file="access.log"
+
+# Use grep to first find lines with 'POST' requests and then filter those lines to find ones with a status code of '404'
+grep 'POST' "$file" | grep ' 404 '
+
+
+
+//FOR Question 2
+# Calculate the total power level by summing the fourth field of each line in the file
+total_power=$(awk -F, '{sum += $4} END {print sum}' power_levels.txt)
+
+# Display the total power level
+echo "$total_power"
+
+
+
+
+
+
+
+
+
+
